@@ -12,6 +12,8 @@
 		027312681F861C5400B14871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027312661F861C5400B14871 /* Main.storyboard */; };
 		0273126A1F861C5400B14871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027312691F861C5400B14871 /* Assets.xcassets */; };
 		0273126D1F861C5400B14871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0273126B1F861C5400B14871 /* LaunchScreen.storyboard */; };
+		027312751F861E1100B14871 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 027312741F861E0C00B14871 /* MobileNet.mlmodel */; };
+		027312771F8628D500B14871 /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 027312761F8628D000B14871 /* GoogLeNetPlaces.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		027312691F861C5400B14871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0273126C1F861C5400B14871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0273126E1F861C5400B14871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		027312741F861E0C00B14871 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
+		027312761F8628D000B14871 /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 				027312641F861C5400B14871 /* ViewController.swift */,
 				027312661F861C5400B14871 /* Main.storyboard */,
 				027312691F861C5400B14871 /* Assets.xcassets */,
+				027312741F861E0C00B14871 /* MobileNet.mlmodel */,
+				027312761F8628D000B14871 /* GoogLeNetPlaces.mlmodel */,
 				0273126B1F861C5400B14871 /* LaunchScreen.storyboard */,
 				0273126E1F861C5400B14871 /* Info.plist */,
 			);
@@ -138,6 +144,8 @@
 			files = (
 				027312651F861C5400B14871 /* ViewController.swift in Sources */,
 				027312631F861C5400B14871 /* AppDelegate.swift in Sources */,
+				027312751F861E1100B14871 /* MobileNet.mlmodel in Sources */,
+				027312771F8628D500B14871 /* GoogLeNetPlaces.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +283,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T4P2URJR2Z;
 				INFOPLIST_FILE = RecognizeImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = recruit.ochi.RecognizeImage;
@@ -289,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T4P2URJR2Z;
 				INFOPLIST_FILE = RecognizeImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = recruit.ochi.RecognizeImage;

@@ -54,8 +54,20 @@ class ViewController: UIViewController {
                 guard let results = request.results as? [VNClassificationObservation] else {
                     return
                 }
-                let resultStrs = results.map { "\($0.identifier): \(NSString(format: "%.2f", $0.confidence))" }.prefix(5)
-                self.outputLabel.text = "● 解析結果\n" + resultStrs.joined(separator: "\n")
+                debugPrint(results)
+                var resultStrs = results.map { "\($0.identifier): \(NSString(format: "%.2f", $0.confidence))" }.prefix(5)
+                
+                let attrText = NSMutableAttributedString(string: resultStrs.first!)
+                attrText.addAttributes([NSAttributedStringKey.foregroundColor: UIColor.red], range: NSMakeRange(0, attrText.length))
+                attrText.addAttributes([NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)], range: NSMakeRange(0, attrText.length))
+
+                resultStrs.remove(at: 0)
+                let lText = resultStrs.joined(separator: "\n")
+                attrText.append(NSAttributedString(string: "\n" + lText))
+                
+                let text = NSMutableAttributedString(string: "● 解析結果\n")
+                text.append(attrText)
+                self.outputLabel.attributedText = text
             }
             request.imageCropAndScaleOption = .centerCrop
             let handler = VNImageRequestHandler(cgImage: image.cgImage!)
